@@ -1,10 +1,11 @@
 const cartas = [
     "A♠",
-    "7♥",
-    "K♦"
+    "K♦",
+    "7♥"
 ];
 
 const area = document.getElementById("cartas-jogador");
+
 const centro = document.getElementById("centro");
 
 cartas.forEach(carta => {
@@ -23,10 +24,17 @@ cartas.forEach(carta => {
             </div>
         `;
 
-        div.remove();
+        div.style.opacity = "0.3";
 
     };
 
     area.appendChild(div);
 
 });
+
+document
+.getElementById("btn-truco")
+.onclick = () => {
+
+    alert("TRUUUUCOOOO!");
+};
