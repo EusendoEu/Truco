@@ -1,13 +1,13 @@
-const cartasJogador = [
+const cartas = [
     "A♠",
-    "K♦",
-    "7♥"
+    "7♥",
+    "K♦"
 ];
 
-const areaJogador = document.getElementById("cartas-jogador");
+const area = document.getElementById("cartas-jogador");
 const centro = document.getElementById("centro");
 
-cartasJogador.forEach(carta => {
+cartas.forEach(carta => {
 
     const div = document.createElement("div");
 
@@ -18,13 +18,15 @@ cartasJogador.forEach(carta => {
     div.onclick = () => {
 
         centro.innerHTML = `
-            <h2>Carta Jogada</h2>
-            <div class="carta">${carta}</div>
+            <div class="carta">
+                ${carta}
+            </div>
         `;
 
         div.remove();
+
     };
 
-    areaJogador.appendChild(div);
+    area.appendChild(div);
 
 });
