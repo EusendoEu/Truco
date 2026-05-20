@@ -8,24 +8,33 @@ const area = document.getElementById("cartas-jogador");
 
 const centro = document.getElementById("centro");
 
-cartas.forEach(carta => {
+cartas.forEach(carta=>{
 
     const div = document.createElement("div");
 
     div.className = "carta";
 
-    div.innerText = carta;
+    div.innerHTML = carta;
 
-    div.onclick = () => {
+    div.setAttribute("data-small", carta);
 
-        centro.innerHTML = `
-            <div class="carta">
-                ${carta}
-            </div>
-        `;
+    div.onclick = ()=>{
 
-        div.style.opacity = "0.3";
+        centro.innerHTML = "";
 
+        const cartaJogada = document.createElement("div");
+
+        cartaJogada.className = "carta";
+
+        cartaJogada.innerHTML = carta;
+
+        cartaJogada.setAttribute("data-small", carta);
+
+        centro.appendChild(cartaJogada);
+
+        div.style.opacity = ".25";
+
+        div.style.transform = "scale(.9)";
     };
 
     area.appendChild(div);
@@ -34,7 +43,23 @@ cartas.forEach(carta => {
 
 document
 .getElementById("btn-truco")
-.onclick = () => {
+.onclick = ()=>{
 
-    alert("TRUUUUCOOOO!");
+    const btn =
+    document.getElementById("btn-truco");
+
+    btn.innerHTML = "TRUUUUCOOOO!";
+
+    btn.style.transform =
+    "translateX(-50%) scale(1.15)";
+
+    setTimeout(()=>{
+
+        btn.innerHTML = "TRUCO!";
+
+        btn.style.transform =
+        "translateX(-50%) scale(1)";
+
+    },1000);
+
 };
