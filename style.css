@@ -1,0 +1,39 @@
+body{
+    background: #0b6623;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+#mesa{
+    margin-top: 30px;
+}
+
+#cartas-jogador{
+    margin-top: 20px;
+}
+
+.carta{
+    width: 90px;
+    height: 130px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.carta:hover{
+    transform: translateY(-10px);
+}
