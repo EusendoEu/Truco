@@ -1,4 +1,12 @@
 
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Gabriel HUB",
+    Text = "Script carregado!",
+    Duration = 5
+})
+
+print("SCRIPT OK")
+
 --[[
     Gabriel HUB - Premium GUI for Prison Life
     Made with ❤️
