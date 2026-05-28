@@ -1,11 +1,10 @@
+print("FUNCIONOU")
 
-game.StarterGui:SetCore("SendNotification", {
+game:GetService("StarterGui"):SetCore("SendNotification",{
     Title = "Gabriel HUB",
-    Text = "Script carregado!",
+    Text = "Carregado com sucesso",
     Duration = 5
 })
-
-print("SCRIPT OK")
 
 --[[
     Gabriel HUB - Premium GUI for Prison Life
